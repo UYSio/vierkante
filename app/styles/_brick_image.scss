@@ -1,0 +1,7 @@
+.brick-post {
+  @extend .brick;
+}
+.brick-post img {
+  width: $w;
+  height: $h;
+}

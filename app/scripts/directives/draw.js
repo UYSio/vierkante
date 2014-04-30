@@ -11,7 +11,8 @@ angular.module('elasticsearchAngularjsPoweredApp')
     templateMap = {
       post: '_post.html',
       posts: '_post.html',
-      photo: '_photo.html',
+      image: '_image.html',
+      photo: '_image.html',
       video: '_video.html',
       tweet: '_tweet.html',
       link: '_link.html',
