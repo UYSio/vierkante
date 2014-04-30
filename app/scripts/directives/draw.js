@@ -38,6 +38,7 @@ angular.module('elasticsearchAngularjsPoweredApp')
       scope: {
         thing: '='
       },
+      replace: true,
       link: linker
     };
   }]);

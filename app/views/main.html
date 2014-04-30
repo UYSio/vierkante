@@ -1,7 +1,6 @@
-<div masonry infinite-scroll="show_more()">
-  <div ng-repeat="results in resultsArr">
-    <div ng-repeat="doc in results.hits.hits" class="masonry-brick drw">
+<!-- infinite-scroll="show_more()"  -->
+<div masonry id="container">
+    <div ng-repeat="doc in resultsArr[0].hits.hits" class="masonry-brick">
       <draw thing="doc"></draw>
     </div>
-  </div>
 </div>

@@ -1,11 +1,44 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
+@import 'breakpoints';
 
+/* width/height/margin of bricks */
+$w: 200px;
+$h: $w;
+$m: 30px;
 
-.drw {
-  border: 1px solid grey;
+body {
+  margin-left: $m;
 }
+
+.brick-common {
+  border: 1px solid #ddd;
+  margin: $m $m 0 0;
+}
+
+.brick {
+  @extend .brick-common;
+  width: $w;
+  height: $h;
+/*
+  @include breakpoint(papa-bear) { width: 10%; }
+  @include breakpoint(mama-bear) { width: 20%; }
+  @include breakpoint(baby-bear) { width: 40%; }
+*/
+}
+.brick.w2 {
+  @extend .brick-common;
+  width: $w * 2;
+  height: $h * 2;
+/*
+  @include breakpoint(papa-bear) { width: 10% * 2; }
+  @include breakpoint(mama-bear) { width: 20% * 2; }
+  @include breakpoint(baby-bear) { width: 40% * 2; }
+*/
+}
+
+@import 'brick_post';
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

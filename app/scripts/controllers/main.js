@@ -9,7 +9,7 @@ angular.module('elasticsearchAngularjsPoweredApp')
         .indices('my_index');
     $scope.resultsArr = [];
 
-    $scope.per_page = 25;
+    $scope.per_page = 32;
     $scope.page = 0;
  
     $scope.show_more = function () {
