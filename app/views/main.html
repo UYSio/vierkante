@@ -1,7 +1,7 @@
 <div masonry>
   <div ng-repeat="results in resultsArr">
     <div ng-repeat="doc in results.hits.hits" class="masonry-brick">
-      <span>{{doc | json}}</span>
+      <draw thing="doc"></draw>
     </div>
   </div>
 </div>
