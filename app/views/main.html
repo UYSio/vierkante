@@ -1,8 +1,7 @@
-<div>
-  <button ng-click="search()">Search</button>
-  <ul ng-repeat="results in resultsArr">
-    <li ng-repeat="doc in results.hits.hits">
-      <span ng-bind="doc.fields.message[0]"></span>
-    </li>
-  </ul>
+<div masonry>
+  <div ng-repeat="results in resultsArr">
+    <div ng-repeat="doc in results.hits.hits" class="masonry-brick">
+      <span>{{doc | json}}</span>
+    </div>
+  </div>
 </div>

@@ -6,7 +6,8 @@ angular.module('elasticsearchAngularjsPoweredApp', [
   'ngSanitize',
   'ngRoute',
   'elasticjs.service',
-  'infinite-scroll'
+  'infinite-scroll',
+  'wu.masonry'
 ])
   .config(function ($routeProvider) {
     $routeProvider
