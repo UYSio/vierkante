@@ -1,7 +1,11 @@
-.brick-post {
-  @extend .brick;
+.brick-image {
+  @extend .brick-common;
+  word-wrap: break-word;
+  background-color: black;
+  background-position: center;
 }
-.brick-post img {
-  width: $w;
-  height: $h;
+.brick-image a {
+  @extend .brick-common;
+  display: block;
+  background-size: 100% 100%;
 }
