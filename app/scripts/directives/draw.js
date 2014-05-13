@@ -18,7 +18,12 @@ angular.module('elasticsearchAngularjsPoweredApp')
       link: '_link.html',
       audio: '_audio.html'
     };
-    var templateUrl = baseUrl + templateMap[contentType];
+    var templateType = templateMap[contentType];
+    if (typeof templateType === 'undefined') {
+      var templateUrl = baseUrl + "_undefined.html";
+    } else {
+      var templateUrl = baseUrl + templateType;
+    }
     templateLoader = $http.get(templateUrl, {cache: $templateCache});
     return templateLoader;
   };
