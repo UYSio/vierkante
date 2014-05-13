@@ -23,15 +23,15 @@ angular.module('elasticsearchAngularjsPoweredApp')
     return templateLoader;
   };
 
-  var linker = function(scope, element, attrs) {
+  var linker = function(scope, element) {
 
     var loader = getTemplate(scope.thing._type);
 
-    var promise = loader.success(function(html) {
+    loader.success(function(html) {
         element.html(html);
-    }).then(function (response) {
+      }).then(function () {
         element.replaceWith($compile(element.html())(scope));
-    });
+      });
   };
 
   return {
@@ -42,4 +42,4 @@ angular.module('elasticsearchAngularjsPoweredApp')
       replace: true,
       link: linker
     };
-  }]);
+}]);

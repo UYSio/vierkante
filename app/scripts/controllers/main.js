@@ -9,27 +9,31 @@ angular.module('elasticsearchAngularjsPoweredApp')
         .indices('my_index');
     $scope.resultsArr = [];
 
-    $scope.per_page = 32;
+    $scope.perPage = 32;
     $scope.page = 0;
  
-    $scope.show_more = function () {
+    $scope.showMore = function () {
         $scope.page += 1;
-        $scope.search($scope.page*$scope.per_page);
-    };
+        $scope.search($scope.page*$scope.perPage);
+      };
  
     $scope.search = function(offset) {
         $scope.resultsArr = [];
         var results = client
             .query(query.query($scope.queryTerm || '*'))
             .from(offset)
-            .size($scope.per_page)
+            .size($scope.perPage)
             .doSearch();
         $q.when(results).then(function(result) {
-          $scope.resultsArr.push(result);        
+          $scope.resultsArr.push(result);
         });
-    };
+      };
 
     $scope.search($scope.page);
+
+    $scope.removeDoc = function() {
+      console.log('DELETE');
+    };
 
   }]);
 

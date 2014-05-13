@@ -42,14 +42,14 @@ angular.module('elasticjs.service', [])
     }
     
     // set url to empty string if it was not specified
-    if (config.server == null) {
+    if (config.server === null) {
       config.server = '';
     }
 
     /* implement the elastic.js client interface for angular */
     ejs.client = {
       server: function (s) {
-        if (s == null) {
+        if (s === null) {
           return config.server;
         }
       
@@ -85,7 +85,7 @@ angular.module('elasticjs.service', [])
           .then(function (response) {
           (successcb || angular.noop)(response.headers());
           return response.headers();
-        }, function (response) {
+        }, function () {
           (errorcb || angular.noop)(undefined);
           return undefined;
         });
