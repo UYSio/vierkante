@@ -1,6 +1,3 @@
 <div class="brick-post">
-  <ng-include src="'views/helpers/_delete.html'"></ng-include>
-
-<button ng-click="removeDoc()" class="glyphicon glyphicon-plus"></button>
   <p>A new post tagged <span ng-repeat="tag in thing._source.tags">{{tag}} </span></p>
 </div>
