@@ -2,6 +2,6 @@
 <div masonry id="container">
     <div ng-repeat="doc in resultsArr[0].hits.hits" class="masonry-brick brick">
       <draw thing="doc"></draw>
-      <button ng-click="removeDoc()" class="glyphicon glyphicon-remove"></button>
+      <button ng-click="removeDoc(doc)" class="glyphicon glyphicon-remove"></button>
     </div>
 </div>

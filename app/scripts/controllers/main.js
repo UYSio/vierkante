@@ -31,8 +31,22 @@ angular.module('elasticsearchAngularjsPoweredApp')
 
     $scope.search($scope.page);
 
-    $scope.removeDoc = function() {
-      console.log('DELETE');
+    $scope.removeDoc = function(doc) {
+      console.log('DELETE', doc);
+      var delQuery = ejs.TermQuery();
+      // we're looking to send this:
+      // -d '{"query":{"term":{"_id":"1hBxs5VuSkmEl8K3e4_UIA"}}}'
+      delQuery.field('_id');
+      delQuery.term(doc._id);
+      //delQuery.query('_id:'+doc._id);
+      console.log('QUERY', delQuery.toString());
+      client
+        .query(delQuery)
+        .doDeleteByQuery(function() {
+        console.log('delete success');
+      }, function(e) {
+        console.log('delete error', e);
+      });
     };
 
   }]);
