@@ -32,8 +32,13 @@ body {
   vertical-align: middle;
 }
 
+/*
+Find colours for new swatches here:
+https://kuler.adobe.com/create/color-wheel/?base=2&rule=Complementary&selected=1&name=StreamOfConciousness&mode=rgb&rgbvalues=0.2818447378951581,0.5725828607305438,0.6607843137254903,0.6265306122448979,0.9130717804363564,1,0.5058823529411764,0.8549019607843137,0.9607843137254902,0.6607843137254903,0.43757730534732836,0.21576630652260903,0.9607843137254902,0.7326198257079608,0.5058823529411764&swatchOrder=0,1,2,3,4
+*/
 @import 'brick_post';
 @import 'brick_image';
+@import 'brick_rss';
 @import 'brick_undefined';
 
 /* Responsive: Portrait tablets and up */

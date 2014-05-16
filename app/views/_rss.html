@@ -1,0 +1,22 @@
+<!--
+Renders an RSS model, which contains:
+ - link: the click-through link
+ - description: this field will be rendered as-is.
+ - title
+ - category: usu. 'image', 'tweet', etc, but shouldn't be relied on to be accurate.
+
+Example:
+
+        "_source": {
+          "link": "http://theyesmen.tumblr.com/post/85895251807",
+          "description": "<img src=\"http://37.media.tumblr.com/a3e1045ffdc98d17cfc947a8d3b45bcb/tumblr_n5nmgm3QLY1ste77no1_500.jpg\"/><br/><br/><p>A gentle reminder to all my friends that cats do indeed on occasion say miaow. <a href=\"http://ift.tt/1lnnd85\">http://ift.tt/1lnnd85</a></p>",
+          "title": "A gentle reminder to all my friends that cats do indeed on...",
+          "category": "image"
+        },
+
+-->
+<div class="brick-rss">
+  <a ng-href={{thing._source.link}}>
+    <div ng-bind-html="thing._source.description"></div>
+  </a>
+</div>

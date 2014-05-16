@@ -16,8 +16,10 @@ angular.module('elasticsearchAngularjsPoweredApp')
       video: '_video.html',
       tweet: '_tweet.html',
       link: '_link.html',
-      audio: '_audio.html'
+      audio: '_audio.html',
+      rss: '_rss.html'
     };
+
     var templateType = templateMap[contentType];
     var templateUrl = baseUrl;
     if (typeof templateType === 'undefined') {
@@ -31,7 +33,12 @@ angular.module('elasticsearchAngularjsPoweredApp')
 
   var linker = function(scope, element) {
 
-    var loader = getTemplate(scope.thing._type);
+    // if contentType is 'any', look at the category field for hints.
+    var contentType = scope.thing._type;
+    if (contentType === 'any') {
+      contentType = scope.thing._source.category;
+    }
+    var loader = getTemplate(contentType);
 
     loader.success(function(html) {
         element.html(html);

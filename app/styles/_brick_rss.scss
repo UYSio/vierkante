@@ -1,0 +1,15 @@
+.brick-rss {
+  @extend .brick-common;
+  word-wrap: break-word;
+  background-color: #A0E9FF;
+  background-position: center;
+}
+.brick-rss a {
+  @extend .brick-common;
+  display: block;
+  background-size: 100% 100%;
+}
+
+.brick-rss img {
+  @extend .brick-common;
+}
