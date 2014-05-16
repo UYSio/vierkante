@@ -17,3 +17,18 @@
 .brick-rss em > a {
   background: #F5BB81;
 }
+
+/*
+The below block is a mess (margin-top, especially).
+*/
+.brick-rss aside {
+  font-size: 200%;
+  right: 5px;
+  bottom: 5px;
+  margin-top: 150px;
+  padding: 10px 40px 10px 10px;
+  background: #4892A8; 
+  color: white;
+  @include border-radius(5px); 
+  position: absolute;
+}
