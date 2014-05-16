@@ -21,7 +21,7 @@ angular.module('elasticsearchAngularjsPoweredApp')
     var templateType = templateMap[contentType];
     var templateUrl = baseUrl;
     if (typeof templateType === 'undefined') {
-      templateUrl += + '_undefined.html';
+      templateUrl += '_undefined.html';
     } else {
       templateUrl += templateType;
     }
