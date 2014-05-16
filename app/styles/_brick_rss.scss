@@ -13,3 +13,7 @@
 .brick-rss img {
   @extend .brick-common;
 }
+
+.brick-rss em > a {
+  background: #F5BB81;
+}
