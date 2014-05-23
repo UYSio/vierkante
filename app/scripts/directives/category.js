@@ -8,8 +8,10 @@ angular.module('elasticsearchAngularjsPoweredApp')
     baseUrl = 'views/rss/',
     templateMap = {
       tweet: '_twitter.html',
-      // TODO replace image with something more specific, e.g. instragram, flickr, etc.
-      image: '_image.html'
+      image: '_image.html',
+      instagram: '_image.html',
+      flickr: '_image.html'
+      // TODO youtube, post
     };
 
     var templateType = templateMap[contentType];
