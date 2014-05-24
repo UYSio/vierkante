@@ -1,0 +1,22 @@
+<div>
+  <form ng-submit="upsert()" name="thingForm" role="form">
+    <h3>Thing</h3>
+    <p class="text-warning" ng-show="thing._id">ID: {{thing._id}}, version {{thing._version}}</p>
+
+    <fieldset>
+
+      <select ng-model="template" ng-options="t.name for t in templates">
+        <option value="">(blank)</option>
+      </select>
+
+      <div ng-include="template.url"></div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">
+          <span>Upsert</span>
+        </button>
+      </div>
+
+    </fieldset>
+  </form>
+</div>

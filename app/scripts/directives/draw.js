@@ -17,6 +17,7 @@ angular.module('elasticsearchAngularjsPoweredApp')
       tweet: '_tweet.html',
       link: '_link.html',
       audio: '_audio.html',
+      review: '_review.html',
       rss: '_rss.html'
     };
 

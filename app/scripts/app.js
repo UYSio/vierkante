@@ -7,13 +7,18 @@ angular.module('elasticsearchAngularjsPoweredApp', [
   'ngRoute',
   'elasticjs.service',
   'infinite-scroll',
-  'wu.masonry'
+  'wu.masonry',
+  'base64'
 ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
+      })
+      .when('/admin', {
+        templateUrl: 'views/admin.html',
+        controller: 'AdminCtrl'
       })
       .otherwise({
         redirectTo: '/'

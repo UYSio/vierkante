@@ -1,0 +1,30 @@
+<input type="hidden" ng-model="thing._type" ng-init="thing._type = 'review'"/>
+
+<div class="form-group">
+  <label class="control-label" for="nameName">Name</label>
+  <div>
+    <input type="text" id="nameName" placeholder="The name of the thing you're reviewing..." ng-model="thing._source.name" required class="form-control"/>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="control-label" for="reviewName">Review</label>
+  <div>
+    <input type="text" id="reviewName" placeholder="Thee review itself..." ng-model="thing._source.review" required class="form-control"/>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="control-label" for="linkName">Link</label>
+  <div>
+    <input type="text" id="linkName" placeholder="http://www.imdb.com/..." ng-model="thing._source.link" required class="form-control"/>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="control-label" for="starsName">Stars (out of 5)</label>
+  <div>
+    <input type="text" id="starsName" placeholder="How many stars?" ng-model="thing._source.stars" required class="form-control"/>
+  </div>
+</div>
+
