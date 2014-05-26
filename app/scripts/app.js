@@ -16,7 +16,7 @@ angular.module('elasticsearchAngularjsPoweredApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/admin', {
+      .when('/admin/:key', {
         templateUrl: 'views/admin.html',
         controller: 'AdminCtrl'
       })
